@@ -1,6 +1,6 @@
 environment:
   name: dev
-  dns: dev.yacapai.com
+  dns: dev.gustavo-td.com
 client:
   name: frontend
   replicaCount: 1
