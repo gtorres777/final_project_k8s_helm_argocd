@@ -10,6 +10,7 @@ on:
       - '!argocd-apps/**'
       - '!react-node-app/frontend/**'
       - '!.github/**'
+      - '!README.md'
 
 jobs:
 

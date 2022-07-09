@@ -10,6 +10,7 @@ on:
       - '!argocd-apps/**'
       - '!react-node-app/microservice/**'
       - '!.github/**'
+      - '!README.md'
 
 jobs:
 
