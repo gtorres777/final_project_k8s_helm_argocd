@@ -11,6 +11,7 @@ on:
       - '!react-node-app/microservice/**'
       - '!.github/**'
       - '!README.md'
+      - '!final-project-app-argocd.yaml'
 
 jobs:
 
