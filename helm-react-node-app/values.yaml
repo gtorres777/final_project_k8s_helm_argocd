@@ -1,6 +1,6 @@
 environment:
   name: stage
-  dns: stage.yacapai.com
+  dns: stage.gustavo-td.com
 client:
   name: frontend
   replicaCount: 1

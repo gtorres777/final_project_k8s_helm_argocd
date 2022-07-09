@@ -9,6 +9,7 @@ on:
       - '!helm-react-node-app/**'
       - '!react-node-app/microservice/**'
       - '!.github/**'
+      - '!README.md'
 
 jobs:
 
