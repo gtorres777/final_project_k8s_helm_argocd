@@ -9,7 +9,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: helm-react-node-app
-    repoURL: 'https://github.com/gtorres777/test_final_project'
+    repoURL: 'https://github.com/gtorres777/final_project_k8s_helm_argocd'
     targetRevision: prod
   project: default
   syncPolicy:

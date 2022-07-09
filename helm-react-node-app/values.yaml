@@ -1,6 +1,6 @@
 environment:
   name: prod
-  dns: prod.yacapai.com
+  dns: www.gustavo-td.com
 client:
   name: frontend
   replicaCount: 1
