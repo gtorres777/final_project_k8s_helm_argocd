@@ -7,7 +7,7 @@ const Header = () => {
                 AWS DevOps Trainee Program final Project
             </h1>
             <h2>
-                feature2
+                feature3
             </h2>
         </div>
   )
