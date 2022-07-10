@@ -13,6 +13,7 @@ on:
       - '!README.md'
       - '!final-project-app-argocd.yaml'
 
+
 jobs:
 
   apply_linter:
