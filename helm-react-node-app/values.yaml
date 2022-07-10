@@ -32,3 +32,19 @@ backend:
     PGHOST: postgres-rds.cz0vpnsvjuwe.us-east-1.rds.amazonaws.com
     PGDATABASE: production
     PGPASSWORD: production
+  resources:
+    limits:
+      cpu: 500m
+      memory: 256Mi
+    requests:
+      cpu: 200m
+      memory: 128Mi
+hpa:
+  name: microservice-hpa
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+    type: Resource
+    name: cpu
+    targetType: Utilization
+    targetAverageUtilization: 30
