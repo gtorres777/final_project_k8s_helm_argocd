@@ -1,12 +1,12 @@
 environment:
-  name: dev
-  dns: dev.gustavo-td.com
+  name: stage
+  dns: stage.gustavo-td.com
 client:
   name: frontend
   replicaCount: 1
   image:
-    repository: biotux7/dev-js-frontend
-    tag: b5e7da9e36c44d65bd43aa22e353eda63df2d86e
+    repository: biotux7/stage-js-frontend
+    tag: 8a3d70e772b6b42448e3e7e100426f2f89965197
   deploymentPorts:
     containerPort: 3000
   servicePorts:
@@ -18,8 +18,8 @@ backend:
   name: microservice
   replicaCount: 1
   image:
-    repository: biotux7/dev-microservice
-    tag: 7c6cb93d372ad86c4a655ee1464199b7c7ab81e2
+    repository: biotux7/stage-microservice
+    tag: fdc8a21d380a07e1482f7e7eefdd5628cb724088
   deploymentPorts:
     containerPort: 5000
   servicePorts:
@@ -28,7 +28,7 @@ backend:
   ingressPorts:
     port: 5000
   env:
-    PGUSER: devuser
+    PGUSER: stageuser
     PGHOST: postgres-rds.cz0vpnsvjuwe.us-east-1.rds.amazonaws.com
-    PGDATABASE: development
-    PGPASSWORD: development
+    PGDATABASE: stage
+    PGPASSWORD: stage
