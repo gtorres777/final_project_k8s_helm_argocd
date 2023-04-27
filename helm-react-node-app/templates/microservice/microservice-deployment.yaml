@@ -30,3 +30,10 @@ spec:
               value: {{ .Values.backend.env.PGDATABASE }}
             - name: PGPASSWORD
               value: {{ .Values.backend.env.PGPASSWORD }}
+          resources:
+            limits:
+              cpu: {{ .Values.backend.resources.limits.cpu }}
+              memory: {{ .Values.backend.resources.limits.memory }}
+            requests:
+              cpu: {{ .Values.backend.resources.requests.cpu }}
+              memory: {{ .Values.backend.resources.requests.memory }}
