@@ -6,7 +6,7 @@ client:
   replicaCount: 1
   image:
     repository: biotux7/stage-js-frontend
-    tag: 4fabd91d9f361d627afff04ff23c7fc6a0f1d3a7
+    tag: 1f6f6248dbdb43d0b54c0fdf5c5a170027f14ab1
   deploymentPorts:
     containerPort: 3000
   servicePorts:
