@@ -11,7 +11,7 @@ services:
       retries: 20
 
   client:
-    image: "biotux7/dev-js-frontend"
+    image: "biotux7/stage-js-frontend"
     mem_limit: 128m
     hostname: client
 
@@ -19,7 +19,7 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    image: "biotux7/dev-microservice"
+    image: "biotux7/stage-microservice"
     mem_limit: 128m
     hostname: api
     environment:

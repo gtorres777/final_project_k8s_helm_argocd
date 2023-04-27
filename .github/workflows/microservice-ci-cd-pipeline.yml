@@ -3,7 +3,7 @@ name: CI/CD node microservice
 on:
   push:
     branches:
-      - dev
+      - stage
     paths:
       - 'react-node-app/microservice/**'
       - '!helm-react-node-app/**'
@@ -80,7 +80,7 @@ jobs:
       - name: Update microservice image helm
         uses: fjogeleit/yaml-update-action@master
         with:
-          branch: dev
+          branch: stage
           valueFile: 'helm-react-node-app/values.yaml'
           propertyPath: 'backend.image.tag'
           value: ${{ steps.generate_sha.outputs.sha }}
