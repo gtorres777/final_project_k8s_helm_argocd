@@ -3,7 +3,7 @@ name: CI/CD frontend service
 on:
   push:
     branches:
-      - dev
+      - stage
     paths:
       - 'react-node-app/frontend/**'
       - '!helm-react-node-app/**'
@@ -104,7 +104,7 @@ jobs:
       - name: Update js-frontend image helm
         uses: fjogeleit/yaml-update-action@master
         with:
-          branch: dev
+          branch: stage
           valueFile: 'helm-react-node-app/values.yaml'
           propertyPath: 'client.image.tag'
           value: ${{ steps.generate_sha.outputs.sha }}
