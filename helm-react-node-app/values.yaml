@@ -1,6 +1,6 @@
 environment:
   name: stage
-  dns: stage.gustavo-td.com
+  dns: stage.gustavo-td.link
 client:
   name: frontend
   replicaCount: 1
