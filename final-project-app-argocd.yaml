@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: final-project
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    name: ''
+    namespace: argocd
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: argocd-apps
+    repoURL: 'https://github.com/gtorres777/final_project_k8s_helm_argocd'
+    targetRevision: prod
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

@@ -1,6 +1,6 @@
 environment:
-  name: stage
-  dns: stage.gustavo-td.com
+  name: prod
+  dns: www.gustavo-td.com
 client:
   name: frontend
   replicaCount: 1
@@ -18,8 +18,8 @@ backend:
   name: microservice
   replicaCount: 1
   image:
-    repository: biotux7/stage-microservice
-    tag: fdc8a21d380a07e1482f7e7eefdd5628cb724088
+    repository: biotux7/prod-microservice
+    tag: 9ee8f909b55809795a3e4bc28cd4a665a558563c
   deploymentPorts:
     containerPort: 5000
   servicePorts:
@@ -28,7 +28,23 @@ backend:
   ingressPorts:
     port: 5000
   env:
-    PGUSER: stageuser
+    PGUSER: produser
     PGHOST: postgres-rds.cz0vpnsvjuwe.us-east-1.rds.amazonaws.com
-    PGDATABASE: stage
-    PGPASSWORD: stage
+    PGDATABASE: production
+    PGPASSWORD: production
+  resources:
+    limits:
+      cpu: 500m
+      memory: 256Mi
+    requests:
+      cpu: 200m
+      memory: 128Mi
+hpa:
+  name: microservice-hpa
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+    type: Resource
+    name: cpu
+    targetType: Utilization
+    targetAverageUtilization: 30

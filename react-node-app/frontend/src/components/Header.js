@@ -4,7 +4,7 @@ const Header = () => {
   return (
         <div className="header">
             <h1>
-                AWS DevOps Trainee Program final - Stage Environment
+                AWS DevOps Trainee Program final Project
             </h1>
             <h2>
                 feature4
