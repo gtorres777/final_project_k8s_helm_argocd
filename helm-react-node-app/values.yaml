@@ -1,6 +1,6 @@
 environment:
   name: dev
-  dns: dev.gustavo-td.com
+  dns: dev.gustavo-td.link
 client:
   name: frontend
   replicaCount: 1
